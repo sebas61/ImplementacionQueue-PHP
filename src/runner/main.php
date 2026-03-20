@@ -23,12 +23,20 @@ echo "Sacando: " . $queue->_pull() . "\n";
 echo "Tamaño después de sacar: " . $queue->_size() . "\n";
 
 echo "¿Está vacía ahora?: ";
-echo ($queue->_isEmpty() ? "Sí" : "No") . "\n";
+if ($queue->_isEmpty()) {
+    echo "Sí\n";
+} else {
+    echo "No\n";
+}
 
 echo "Sacando el ultimo: " . $queue->_pull() . "\n";
 
 echo "¿Está vacía ?: ";
-echo ($queue->_isEmpty() ? "Sí" : "No") . "\n";
+if ($queue->_isEmpty()) {
+    echo "Sí\n";
+} else {
+    echo "No\n";
+}
 
 echo "Peek en cola vacía: ";
 var_dump($queue->_peek());
